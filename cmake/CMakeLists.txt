@@ -44,15 +44,13 @@ ADD_CUSTOM_TARGET( ${PROJECT_NAME} ALL
         DEPENDS ${PROJECT_NAME}Make
 )
 
-set (IMPORTED_LOCATION ${BUILD_OUT_DIR}/lib)
+set (IMPORTED_LOCATION ${BUILD_OUT_DIR}/lib PARENT_SCOPE)
+set(PUBLIC_HEADER ${BUILD_OUT_DIR}/include PARENT_SCOPE)
 
-add_library(ssl SHARED IMPORTED
-            [GLOBAL])
+add_library(ssl SHARED IMPORTED)
 
-add_library(crypto SHARED IMPORTED
-            [GLOBAL])
+add_library(crypto SHARED IMPORTED)
 
-set(PUBLIC_HEADER ${BUILD_OUT_DIR}/include)
 
 
 
