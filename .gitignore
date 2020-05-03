@@ -13,6 +13,10 @@
 /tmp.*
 /configdata.pm
 
+# cmake
+cmake/CMakeLists.txt.user
+build
+
 # *all* Makefiles
 Makefile
 # ... except in demos
